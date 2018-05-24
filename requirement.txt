@@ -1,0 +1,11 @@
+codegen==1.0
+Django==2.0.5
+django-filter==1.1.0
+django-templated-mail==1.1.1
+django-webpack-loader==0.6.0
+djangorestframework==3.8.2
+djoser==1.1.5
+Markdown==2.6.11
+patterns==0.3
+PyMySQL==0.8.1
+pytz==2018.4

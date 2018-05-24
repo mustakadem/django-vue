@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <div class="column  is-offset-one-fifth">
-      <table class="table">
+
+      <table class="table list-group" v-sortable>
         <thead>
         <tr>
           <th>ID</th>
@@ -12,7 +13,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="hermandad in hermandades">
+        <tr v-for="hermandad in hermandades" class="list-group-item">
           <td>{{hermandad.id}}</td>
           <td>{{hermandad.nombre}}</td>
           <td>{{hermandad.email_responsable}}</td>

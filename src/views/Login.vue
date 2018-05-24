@@ -18,6 +18,9 @@
             <span class="icon is-small is-left"><i class="fas fa-key"></i></span>
             <!--<span class="icon is-small is-right"><i class="fas fa-check"></i></span>-->
           </div>
+          <div v-for="error in errores">
+            <p class="help is-danger">{{error}}</p>
+          </div>
         </div>
         <button class="button is-success">Entrar en el sistema</button>
       </form>
@@ -36,6 +39,7 @@
       return {
         username: null,
         password: null,
+        errores:[]
       }
     },
     methods:{
@@ -46,8 +50,8 @@
           sessionStorage.setItem('authToken', response.data.auth_token);
           sessionStorage.setItem('username', this.username);
           this.$router.push('/admin/panel/')
-        }).catch(response => {
-          console.log(response)
+        }).catch(error => {
+          this.errores = error.response.data;
         });
       }
     }
