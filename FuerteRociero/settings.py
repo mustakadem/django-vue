@@ -25,7 +25,9 @@ INSTALLED_APPS = [
   'django.contrib.staticfiles',
   'webpack_loader',
   'backend',
-  'rest_framework'
+  'rest_framework',
+  'rest_framework.authtoken',
+  'djoser'
 ]
 
 MIDDLEWARE = [
