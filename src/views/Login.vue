@@ -42,7 +42,7 @@
       login(){
         const credenciales = {username:this.username, password: this.password};
 
-        axios.post('http://localhost:8000/auth/token/create/',credenciales).then(response => {
+        axios.post('auth/token/create/',credenciales).then(response => {
           sessionStorage.setItem('authToken', response.data.auth_token);
           sessionStorage.setItem('username', this.username);
           this.$router.push('/admin/panel/')

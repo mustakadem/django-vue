@@ -6,7 +6,7 @@
           <p class="title is-5">Hermandades Registradas</p>
           <p class="subtitle">La Lucha continua</p>
           <router-link   :to="{ name: 'admin'}" exact>
-            <a class="button is-primary">ADMINISTRAR HERMANDADES</a>
+            <a class="button is-primary admin">ADMINISTRAR HERMANDADES</a>
           </router-link>
           <hermandad v-for="hermandad in hermandades" :key="hermandad.id" :hermandad="hermandad"></hermandad>
         </div>
@@ -133,4 +133,6 @@
       height: 100%
   p, a, h1
     color: green
+  a.admin
+    margin-bottom: 20px
 </style>

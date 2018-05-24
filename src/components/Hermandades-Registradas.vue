@@ -39,4 +39,6 @@
 <style scoped lang="sass">
   p, a, h1
     color: green
+  a.button
+    margin-bottom: 20px
 </style>
