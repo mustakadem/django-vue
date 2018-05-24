@@ -1,15 +1,30 @@
 <template>
-    <div>
-      HEMOS ENTRADO
-    </div>
+  <div class="container">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Posicion</th>
+        <th>Nombre</th>
+        <th>Email Responsable</th>
+        <th>Fecha de creacion</th>
+      </tr>
+      </thead>
+
+
+    </table>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "Admin-Panel"
-    }
+  import Hermandad from '../components/Hermandad';
+
+  export default {
+    name: "Admin-Panel",
+    components: {}
+  }
 </script>
 
-<style scoped>
+<style scoped lang="sass">
 
 </style>
