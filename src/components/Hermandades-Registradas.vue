@@ -1,6 +1,6 @@
 <template>
   <div class="box" style="width: 300px;">
-    <p class="title is-5">Hermandades Registradas</p>
+    <p class="title is-5">{{hermandades.length}} Hermandades Registradas</p>
     <p class="subtitle">La Lucha continua</p>
     <router-link :to="{ name: 'admin'}" exact>
       <a class="button is-primary">ADMINISTRAR HERMANDADES</a>

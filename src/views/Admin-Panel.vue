@@ -2,29 +2,25 @@
   <div class="container">
     <div class="column  is-offset-one-fifth">
 
-      <table class="table list-group" v-sortable>
+      <table class="table">
         <thead>
         <tr>
           <th>ID</th>
           <th>Nombre</th>
           <th>Email Responsable</th>
           <th>Fecha de creacion</th>
-          <th>Posicion</th>
         </tr>
         </thead>
         <tbody>
-        <tr v-for="hermandad in hermandades" class="list-group-item">
+        <tr v-for="hermandad in hermandades">
           <td>{{hermandad.id}}</td>
           <td>{{hermandad.nombre}}</td>
           <td>{{hermandad.email_responsable}}</td>
           <td>{{hermandad.fecha_creacion}}</td>
-          <td></td>
-          <td></td>
           <td><a @click.prevent="editarHermandad(hermandad)" class="button is-success"><i
             class="far fa-edit"></i></a></td>
           <td><a class="button is-danger" @click.prevent="eliminarHermandad(hermandad.id)"><i
             class="fas fa-trash-alt"></i></a></td>
-
         </tr>
         </tbody>
       </table>
@@ -98,9 +94,10 @@
 
 <script>
   import hermandadesApi from '../services/hermandadesApi';
+
   import axios from 'axios'
 
-  axios.defaults.xsrfHeaderName = "X-CSRFToken";
+
 
 
   export default {
@@ -112,7 +109,7 @@
       return {
         hermandades: {},
         hermandadModal: {'id': '', 'nombre': '', 'email_responsable': '', 'fecha_creacion': ''},
-        errores:[]
+        errores: []
       }
     },
     methods: {
@@ -142,8 +139,8 @@
 
 
       },
-      actualizarHermandad(id){
-        axios.put('/hermandades/'+id+'/',this.hermandadModal).then(response => {
+      actualizarHermandad(id) {
+        axios.put('/hermandades/' + id + '/', this.hermandadModal).then(response => {
           this.listaHermandades();
           this.hermandadModal = {'id': '', 'nombre': '', 'email_responsable': '', 'fecha_creacion': ''};
           this.errores = [];
@@ -153,7 +150,8 @@
           this.errores = error.response.data;
         });
       }
-    }
+    },
+
   }
 </script>
 
