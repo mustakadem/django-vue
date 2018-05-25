@@ -1,4 +1,12 @@
 # fuerterociero
+> VERSIONES
+``` bash
+# VUE 2
+# PYTHON 3
+# DJANGO 2
+
+
+```
 
 > INSTALACIÓN
 
@@ -35,8 +43,7 @@ pip install -r requirements.txt
 #migrar las tablas
 python manage.py makemigrations
 pyhton manage.py migrate
-
-# serve with hot reload at localhost:8080
+python manage.py createsuperuser //usuario que luego se usara para poder ver la vista del administrador
 python manage.py collectsatic
 
 # build for production with minification
