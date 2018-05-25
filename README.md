@@ -32,6 +32,10 @@ npm run build
 # install dependencies
 pip install -r requirements.txt
 
+#migrar las tablas
+python manage.py makemigrations
+pyhton manage.py migrate
+
 # serve with hot reload at localhost:8080
 python manage.py collectsatic
 
