@@ -4,8 +4,6 @@
 # VUE 2
 # PYTHON 3
 # DJANGO 2
-
-
 ```
 
 > INSTALACIÓN
