@@ -40,7 +40,7 @@ pip install -r requirement.txt
 
 #migrar las tablas
 python manage.py makemigrations
-pyhton manage.py migrate
+python manage.py migrate
 
 #crear usuario admin
 python manage.py createsuperuser //usuario que luego se usara para poder ver la vista del administrador
