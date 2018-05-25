@@ -46,8 +46,6 @@ python manage.py migrate
 python manage.py createsuperuser //usuario que luego se usara para poder ver la vista del administrador
 #directorio publico
 python manage.py collectstatic
-
-# build for production with minification
 ```
 ## Ejecutar App
 
