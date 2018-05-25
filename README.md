@@ -38,12 +38,15 @@ npm run build
 
 ``` bash
 # install dependencies
-pip install -r requirements.txt
+pip install -r requirement.txt
 
 #migrar las tablas
 python manage.py makemigrations
 pyhton manage.py migrate
+
+#crear usuario admin
 python manage.py createsuperuser //usuario que luego se usara para poder ver la vista del administrador
+#directorio publico
 python manage.py collectsatic
 
 # build for production with minification
